@@ -1,5 +1,5 @@
 
 
-var ravencoreTasks = require('ravencore-build');
+var aidpcoreTasks = require('aidpcore-build');
 
-ravencoreTasks('lib');
+aidpcoreTasks('lib');
