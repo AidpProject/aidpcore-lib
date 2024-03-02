@@ -1,10 +1,10 @@
-# Ravencore v1.0.3
+# Aidpcore v1.0.3
 
 ## Principles
 
-Ravencoin is a powerful new peer-to-peer platform for the next generation of financial technology. The decentralized nature of the Ravencoin network allows for highly resilient ravencoin infrastructure, and the developer community needs reliable, open-source tools to implement ravencoin apps and services. Ravencore provides a reliable API for JavaScript apps that need to interface with Ravencoin.
+Aidpcoin is a powerful new peer-to-peer platform for the next generation of financial technology. The decentralized nature of the Aidpcoin network allows for highly resilient aidpcoin infrastructure, and the developer community needs reliable, open-source tools to implement aidpcoin apps and services. Aidpcore provides a reliable API for JavaScript apps that need to interface with Aidpcoin.
 
-To get started, just `npm install ravencore` or `bower install ravencore`.
+To get started, just `npm install aidpcore` or `bower install aidpcore`.
 
 # Documentation Index
 
@@ -17,10 +17,10 @@ To get started, just `npm install ravencore` or `bower install ravencore`.
 
 ## Payment Handling
 * [Using Different Units](unit.md)
-* [Acknowledging and Requesting Payments: Ravencoin URIs](uri.md)
+* [Acknowledging and Requesting Payments: Aidpcoin URIs](uri.md)
 * [The Transaction Class](transaction.md)
 
-## Ravencoin Internals
+## Aidpcoin Internals
 * [Scripts](script.md)
 * [Block](block.md)
 
@@ -35,25 +35,25 @@ To get started, just `npm install ravencore` or `bower install ravencore`.
 
 Some functionality is implemented as a module that can be installed separately:
 
-* [Payment Protocol Support](https://github.com/underdarkskies/ravencore-payment-protocol)
-* [Peer to Peer Networking](https://github.com/underdarkskies/ravencore-p2p)
-* [Ravencoin Core JSON-RPC](https://github.com/underdarkskies/ravend-rpc)
-* [Payment Channels](https://github.com/underdarkskies/ravencore-channel)
-* [Mnemonics](https://github.com/underdarkskies/ravencore-mnemonic)
-* [Elliptical Curve Integrated Encryption Scheme](https://github.com/underdarkskies/ravencore-ecies)
-* [Blockchain Explorers](https://github.com/underdarkskies/ravencore-explorers)
-* [Signed Messages](https://github.com/underdarkskies/ravencore-message)
+* [Payment Protocol Support](https://github.com/AidpProject/aidpcore-payment-protocol)
+* [Peer to Peer Networking](https://github.com/AidpProject/aidpcore-p2p)
+* [Aidpcoin Core JSON-RPC](https://github.com/AidpProject/aidpd-rpc)
+* [Payment Channels](https://github.com/AidpProject/aidpcore-channel)
+* [Mnemonics](https://github.com/AidpProject/aidpcore-mnemonic)
+* [Elliptical Curve Integrated Encryption Scheme](https://github.com/AidpProject/aidpcore-ecies)
+* [Blockchain Explorers](https://github.com/AidpProject/aidpcore-explorers)
+* [Signed Messages](https://github.com/AidpProject/aidpcore-message)
 
 # Examples
 
 ## Create and Save a Private Key
 
 ```javascript
-var privateKey = new ravencore.PrivateKey();
+var privateKey = new aidpcore.PrivateKey();
 
 var exported = privateKey.toWIF();
 // e.g. L3T1s1TYP9oyhHpXgkyLoJFGniEgkv2Jhi138d7R2yJ9F4QdDU2m
-var imported = ravencore.PrivateKey.fromWIF(exported);
+var imported = aidpcore.PrivateKey.fromWIF(exported);
 var hexa = privateKey.toString();
 // e.g. 'b9de6e778fe92aa7edb69395556f843f1dce0448350112e14906efc2a80fa61a'
 ```
@@ -68,7 +68,7 @@ var address = privateKey.toAddress();
 
 ```javascript
 // Build a 2-of-3 address from public keys
-var p2shAddress = new ravencore.Address([publicKey1, publicKey2, publicKey3], 2);
+var p2shAddress = new aidpcore.Address([publicKey1, publicKey2, publicKey3], 2);
 ```
 
 ## Request a Payment
@@ -78,7 +78,7 @@ var paymentInfo = {
   address: '1DNtTk4PUCGAdiNETAzQFWZiy2fCHtGnPx',
   amount: 120000 //satoshis
 };
-var uri = new ravencore.URI(paymentInfo).toString();
+var uri = new aidpcore.URI(paymentInfo).toString();
 ```
 
 ## Create a Transaction
