@@ -54,8 +54,8 @@
     "elliptic": "6.4.0",
     "inherits": "2.0.1",
     "lodash": "^4.17.15",
-    "node-x16r": "github:underdarkskies/node-x16r",
-    "node-x16rv2": "github:underdarkskies/x16rv2_hash"
+    "node-x16r": "github:AidpProject/node-x16r",
+    "node-x16rv2": "github:AidpProject/x16rv2_hash"
   },
   "devDependencies": {
     "brfs": "^1.2.0",
